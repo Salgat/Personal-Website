@@ -1,0 +1,20 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="MasterPage_Projects.master.cs" Inherits="MasterPage2" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentBody" Runat="Server">
+
+    <asp:ContentPlaceHolder id="ProjectContents" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <div id="row_contents" class="row">
+        <div class="col-lg-12">
+            <h3 class="page-header"><a href="/Projects">More Projects</a></h3>
+        </div>
+    </div>
+
+    <div id="ProjectsRow" runat="server">
+    </div>
+
+</asp:Content>
+
