@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage_Projects.master" AutoEventWireup="false" CodeFile="GameBoyEmulator.aspx.cs" Inherits="Projects_BubbleGrow" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Projects/MasterPage_Projects.master" AutoEventWireup="false" CodeFile="GameBoyEmulator.aspx.cs" Inherits="Projects_BubbleGrow" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ProjectContents" Runat="Server">
     <!-- Portfolio Item Heading -->
