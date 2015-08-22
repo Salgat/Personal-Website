@@ -18,7 +18,7 @@
         <asp:TextBox ID="Username" runat="server"></asp:TextBox>
         <br />
         Password
-        <asp:TextBox ID="Password" runat="server"></asp:TextBox>
+        <asp:TextBox ID="Password" TextMode="password" runat="server"></asp:TextBox>
         <br />
         <asp:Button ID="Submit" runat="server" OnClick="Submit_Click" Text="Submit" />
         <br />
