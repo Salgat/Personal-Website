@@ -16,12 +16,15 @@ public partial class Manager_Login : System.Web.UI.Page
         if (Session["permission"] != null)
         {
             Message.Text = "You are already logged in as: " + (string)Session["username"];
-            Message.ForeColor = System.Drawing.Color.Red;
+            LoginInformation.CssClass = "alert alert-info";
             Logout.Enabled = true;
         } else
         {
             Logout.Enabled = false;
+            LoginInformation.Visible = false;
         }
+
+        ResultContainer.Visible = false; // By default, hide
     }
 
     /// <summary>
@@ -101,7 +104,8 @@ public partial class Manager_Login : System.Web.UI.Page
 
         // Password failed, notify user
         Result.Text = "Login failed";
-        Result.ForeColor = System.Drawing.Color.Red;
+        ResultContainer.CssClass = "alert alert-danger";
+        ResultContainer.Visible = true; // Display error message
     }
 
     protected void Logout_Click(object sender, EventArgs e)
