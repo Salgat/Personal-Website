@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-        <h2>Login</h2>
+        <h2 class="text-center">Login</h2>
         <form id="form1" class="form-vertical" runat="server">
             <asp:Panel id="ResultContainer" runat="server">
                 <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
@@ -37,7 +37,10 @@
                     <asp:TextBox ID="Password" TextMode="password" class="form-control" runat="server"></asp:TextBox>
                 </div>
             </div>
-            <div class="form-group"> 
+            <div class="form-group checkbox">
+                    <label><input id="RememberMe" type="checkbox" value="" runat="server"/>Remember Me</label>
+            </div>
+            <div class="form-group">
                 <asp:Button ID="Submit" runat="server" OnClick="Submit_Click" class="btn btn-default" Text="Submit" />
                 <asp:Button ID="Logout" runat="server" OnClick="Logout_Click" class="btn btn-primary" Text="Logout" />
             </div>

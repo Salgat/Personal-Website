@@ -99,6 +99,12 @@ public partial class Manager_Login : System.Web.UI.Page
                 Session["permission"] = permission;
                 Session["username"] = username;
                 Response.Redirect("~/Manager");
+
+                // Extend session timeout to 2 weeks if "Remember Me" checkbox clicked
+                if (RememberMe.Checked)
+                {
+                    HttpContext.Current.Session.Timeout = 60*24*7*2; // 60 Minutes -> 24 hours -> 7 Days -> 2 Weeks
+                }
             }
         }
 
@@ -113,6 +119,7 @@ public partial class Manager_Login : System.Web.UI.Page
         // TODO: This also exists in Default.aspx.cs, remove copies and put logic into a C# authentication file
         // End Session for user
         Session["permission"] = null;
+        Session.Abandon();
         Response.Redirect("~/Manager/Login.aspx");
     }
 }
